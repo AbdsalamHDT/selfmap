@@ -446,7 +446,6 @@ body::before {
 .test-card__icon img {
   width: 32px;
   height: 32px;
-  filter: brightness(0) invert(1);
 }
 
 .test-card__title {
