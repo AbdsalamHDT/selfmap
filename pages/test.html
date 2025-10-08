@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Runner - SelfMap Growth Hub</title>
+    <link rel="stylesheet" href="../css/test.css">
+    <meta name="description" content="Take professional assessments with SelfMap's interactive test runner - IQ, EQ, Personality, and more.">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar__container">
+            <div class="navbar__brand">
+                <img src="../assets/img/logo.png" alt="SelfMap Logo" class="navbar__logo">
+                <span class="navbar__title">SelfMap</span>
+            </div>
+            
+            <div class="navbar__menu">
+                <a href="../index.html" class="navbar__link">Home</a>
+                <a href="tests.html" class="navbar__link">Tests</a>
+                <a href="dashboard.html" class="navbar__link">Dashboard</a>
+                <a href="pay.html" class="navbar__link">Pricing</a>
+                <a href="pay.html" class="navbar__cta">Get Started</a>
+            </div>
+
+            <button class="navbar__hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+            </button>
+
+            <div class="navbar__mobile-menu">
+                <a href="../index.html" class="navbar__mobile-link">Home</a>
+                <a href="tests.html" class="navbar__mobile-link">Tests</a>
+                <a href="pay.html" class="navbar__mobile-link">Pricing</a>
+                <a href="../index.html#about" class="navbar__mobile-link">About</a>
+                <a href="pay.html" class="navbar__mobile-cta">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main" role="main">
+        <!-- Test Header Bar -->
+        <header class="test-header" role="banner">
+            <div class="test-header__container">
+                <div class="test-header__info">
+                    <div class="test-header__icon">
+                        <img id="test-icon" src="" alt="" class="test-header__image">
+                    </div>
+                    <h1 id="test-title" class="test-header__title"></h1>
+                </div>
+
+                <div class="test-header__progress">
+                    <div class="progress-circle">
+                        <svg class="progress-circle__svg" viewBox="0 0 100 100" aria-hidden="true">
+                            <circle class="progress-circle__track" 
+                                    cx="50" cy="50" r="45" 
+                                    fill="none" 
+                                    stroke="rgba(255, 255, 255, 0.1)" 
+                                    stroke-width="4"/>
+                            <circle class="progress-circle__fill" 
+                                    cx="50" cy="50" r="45" 
+                                    fill="none" 
+                                    stroke="url(#progressGradient)" 
+                                    stroke-width="4" 
+                                    stroke-linecap="round"
+                                    pathLength="100"/>
+                            <defs>
+                                <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#3b82f6"/>
+                                    <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                    <stop offset="100%" style="stop-color:#06b6d4"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="progress-circle__content">
+                            <span id="progress-text" class="progress-circle__text">Q0 of 0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="test-header__meta">
+                    <span id="time-estimate" class="test-header__time">~0 min</span>
+                    <button id="save-exit" class="test-header__save">
+                        Save & Exit
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Question Stage -->
+        <section class="question-stage" role="group" aria-labelledby="current-question">
+            <div class="question-stage__container">
+                <!-- Question Content -->
+                <div class="question-content">
+                    <div class="question-image" id="question-image" style="display: none;">
+                        <img id="question-img" src="" alt="" class="question-image__img">
+                    </div>
+                    
+                    <div class="question-prompt">
+                        <h2 id="current-question" class="question-prompt__text"></h2>
+                        <div id="question-subtitle" class="question-prompt__subtitle" style="display: none;"></div>
+                    </div>
+
+                    <!-- Answer Options Container -->
+                    <div class="answer-options" id="answer-options" role="radiogroup" aria-labelledby="current-question">
+                        <!-- Options will be dynamically inserted here -->
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="question-controls">
+                    <button id="prev-btn" class="question-controls__btn question-controls__btn--secondary" disabled>
+                        <span class="question-controls__icon">←</span>
+                        Previous
+                    </button>
+                    
+                    <button id="next-btn" class="question-controls__btn question-controls__btn--primary" disabled>
+                        Next
+                        <span class="question-controls__icon">→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Path -->
+        <section class="progress-path" aria-label="Test progress visualization">
+            <div class="progress-path__container">
+                <div class="progress-path__line" id="progress-line">
+                    <svg class="progress-path__svg" viewBox="0 0 1000 6" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+                                <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.5"/>
+                                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.3"/>
+                            </linearGradient>
+                        </defs>
+                        <line x1="0" y1="3" x2="1000" y2="3" stroke="url(#pathGradient)" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="progress-path__nodes" id="progress-nodes">
+                    <!-- Nodes will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Beautiful Footer -->
+    <footer class="beautiful-footer" role="contentinfo">
+        <div class="beautiful-footer__container">
+            <p class="beautiful-footer__text">
+                Powered by <span class="beautiful-footer__brand">SelfMap</span> • Growth Through Self-Discovery
+            </p>
+        </div>
+    </footer>
+
+    <!-- Loading State -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <div class="loading-spinner__ring"></div>
+                <div class="loading-spinner__ring"></div>
+                <div class="loading-spinner__ring"></div>
+            </div>
+            <p class="loading-text">Loading your test...</p>
+        </div>
+    </div>
+
+    <!-- Error State -->
+    <div class="error-state" id="error-state" style="display: none;">
+        <div class="error-content">
+            <div class="error-icon">⚠️</div>
+            <h2 class="error-title">Test Not Found</h2>
+            <p class="error-message">
+                We couldn't find the test you're looking for. Please return to the tests library and try again.
+            </p>
+            <a href="tests.html" class="error-cta">Back to Tests</a>
+        </div>
+    </div>
+
+    <!-- Exit Confirmation Modal -->
+    <div class="modal-overlay" id="exit-modal" style="display: none;">
+        <div class="modal-content" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+            <h3 id="modal-title" class="modal-title">Save Your Progress?</h3>
+            <p class="modal-message">
+                Your answers have been automatically saved. You can return anytime to continue where you left off.
+            </p>
+            <div class="modal-actions">
+                <button id="modal-continue" class="modal-btn modal-btn--secondary">Continue Test</button>
+                <button id="modal-exit" class="modal-btn modal-btn--primary">Save & Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/test.js"></script>
+</body>
+</html>

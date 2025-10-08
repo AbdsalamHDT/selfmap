@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock Your Growth - SelfMap Growth Hub</title>
+    <link rel="stylesheet" href="../css/pay.css">
+    <meta name="description" content="One step to unlock your full insights and personalized growth plan.">
+</head>
+
+<body>
+    <!-- Glass Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar__container">
+            <div class="navbar__brand">
+                <img src="../assets/img/logo.png" alt="SelfMap Logo" class="navbar__logo">
+                <span class="navbar__title">SelfMap</span>
+            </div>
+            
+            <div class="navbar__menu">
+                <a href="../index.html" class="navbar__link">Home</a>
+                <a href="tests.html" class="navbar__link">Tests</a>
+                <a href="dashboard.html" class="navbar__link">Dashboard</a>
+                <a href="#plans" class="navbar__link">Plans</a>
+            </div>
+
+            <button class="navbar__hamburger" aria-label="Toggle menu">
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Motivational Hero -->
+        <section class="hero-unlock">
+            <div class="hero-unlock__background">
+                <div class="hero-unlock__aurora"></div>
+                <div class="hero-unlock__particles"></div>
+                <canvas id="decorativeRadar" class="hero-unlock__radar"></canvas>
+            </div>
+            
+            <div class="hero-unlock__container">
+                <div class="hero-unlock__content">
+                    <h1 class="hero-unlock__headline" id="heroHeadline">
+                        One step to unlock your full Intelligence insights.
+                    </h1>
+                    <p class="hero-unlock__subheadline" id="heroSubheadline">
+                        You've completed the first part. The full picture—and your training plan—are waiting.
+                    </p>
+                    
+                    <div class="trust-chips">
+                        <div class="trust-chip">
+                            <span class="trust-chip__icon">🔒</span>
+                            <span class="trust-chip__text">Secure checkout</span>
+                        </div>
+                        <div class="trust-chip">
+                            <span class="trust-chip__icon">↻</span>
+                            <span class="trust-chip__text">Cancel anytime</span>
+                        </div>
+                        <div class="trust-chip">
+                            <span class="trust-chip__icon">👶</span>
+                            <span class="trust-chip__text">1 child profile free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Value Stack -->
+        <section class="value-stack">
+            <div class="value-stack__container">
+                <h2 class="value-stack__title">What you'll get</h2>
+                
+                <div class="value-grid">
+                    <div class="value-item">
+                        <div class="value-item__icon">📊</div>
+                        <h3 class="value-item__title">Full breakdown by strengths & hidden opportunities</h3>
+                        <p class="value-item__description">Detailed analysis of your cognitive patterns and growth areas</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-item__icon">🎯</div>
+                        <h3 class="value-item__title">Personalized training plan you can start today</h3>
+                        <p class="value-item__description">Custom exercises and strategies tailored to your profile</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-item__icon">🗺️</div>
+                        <h3 class="value-item__title">Your Growth Map across 8 dimensions</h3>
+                        <p class="value-item__description">Visual roadmap of your development journey</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-item__icon">👨‍👩‍👧‍👦</div>
+                        <h3 class="value-item__title">1 child profile free on Growth Pass</h3>
+                        <p class="value-item__description">Include your family in the growth journey</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-item__icon">🔐</div>
+                        <h3 class="value-item__title">Private & secure • Not medical advice</h3>
+                        <p class="value-item__description">Your data stays yours, for personal development only</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan Selector -->
+        <section class="plan-selector" id="plans">
+            <div class="plan-selector__container">
+                <div class="plan-selector__header">
+                    <h2 class="plan-selector__title">Choose your growth plan</h2>
+                    
+                    <!-- Monthly/Yearly Toggle -->
+                    <div class="billing-toggle">
+                        <span class="billing-toggle__label billing-toggle__label--active" data-period="monthly">Monthly</span>
+                        <div class="billing-toggle__switch">
+                            <input type="checkbox" id="billingToggle" class="billing-toggle__input">
+                            <label for="billingToggle" class="billing-toggle__slider"></label>
+                        </div>
+                        <span class="billing-toggle__label" data-period="yearly">
+                            Yearly
+                            <span class="billing-toggle__badge">Save 50%</span>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="plans-grid">
+                    <!-- Single Test Plan -->
+                    <div class="plan-card" data-plan="single">
+                        <div class="plan-card__header">
+                            <h3 class="plan-card__title">Single Test</h3>
+                            <div class="plan-card__price">
+                                <span class="plan-card__currency">€</span>
+                                <span class="plan-card__amount" data-single-price="19.99">19.99</span>
+                            </div>
+                            <p class="plan-card__period">One-time unlock</p>
+                        </div>
+                        
+                        <ul class="plan-card__features">
+                            <li>Full <span class="test-name-placeholder">Intelligence</span> insights</li>
+                            <li>Personalized training plan</li>
+                            <li>Growth strategies & tips</li>
+                            <li>Secure & private</li>
+                        </ul>
+                        
+                        <button class="plan-card__cta" onclick="selectPlan('single')">
+                            Unlock This Test
+                        </button>
+                    </div>
+
+                    <!-- Growth Pass (Best Value) -->
+                    <div class="plan-card plan-card--featured" data-plan="growth">
+                        <div class="plan-card__badge">Best Value</div>
+                        
+                        <div class="plan-card__header">
+                            <h3 class="plan-card__title">Growth Pass</h3>
+                            <div class="plan-card__price">
+                                <span class="plan-card__currency">€</span>
+                                <span class="plan-card__amount" data-monthly-price="17.99" data-yearly-price="99.00">17.99</span>
+                            </div>
+                            <p class="plan-card__period" data-monthly-text="per month" data-yearly-text="per year">per month</p>
+                        </div>
+                        
+                        <ul class="plan-card__features">
+                            <li>All 8 tests & insights</li>
+                            <li>Complete Growth Map</li>
+                            <li>Training plans for all areas</li>
+                            <li>1 child profile included</li>
+                            <li>Priority support</li>
+                        </ul>
+                        
+                        <button class="plan-card__cta" onclick="selectPlan('growth')">
+                            Start Growing
+                        </button>
+                        
+                        <p class="plan-card__upgrade-hint">
+                            Unlock all tests for less than 2 coffees per month
+                        </p>
+                    </div>
+
+                    <!-- Family Plan -->
+                    <div class="plan-card" data-plan="family">
+                        <div class="plan-card__header">
+                            <h3 class="plan-card__title">Family Plan</h3>
+                            <div class="plan-card__price">
+                                <span class="plan-card__currency">€</span>
+                                <span class="plan-card__amount" data-family-price="29.99">29.99</span>
+                            </div>
+                            <p class="plan-card__period">per month</p>
+                        </div>
+                        
+                        <ul class="plan-card__features">
+                            <li>Everything in Growth Pass</li>
+                            <li>Up to 4 child profiles</li>
+                            <li>Family growth insights</li>
+                            <li>Parenting guidance</li>
+                            <li>Family coaching sessions</li>
+                        </ul>
+                        
+                        <button class="plan-card__cta" onclick="selectPlan('family')">
+                            Grow Together
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic What You'll Unlock -->
+        <section class="unlock-preview">
+            <div class="unlock-preview__container">
+                <h2 class="unlock-preview__title" id="unlockTitle">
+                    What you'll unlock for Intelligence
+                </h2>
+                
+                <div class="unlock-grid" id="unlockGrid">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Checkout Form -->
+        <section class="checkout" id="checkout" style="display: none;">
+            <div class="checkout__container">
+                <div class="checkout__main">
+                    <div class="checkout__steps">
+                        <!-- Step 1: Account -->
+                        <div class="checkout__step checkout__step--active" id="step1">
+                            <div class="step-header">
+                                <div class="step-number">1</div>
+                                <h3 class="step-title">Create your account</h3>
+                            </div>
+                            
+                            <form class="checkout-form">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="password" class="form-label">Create password</label>
+                                    <input type="password" id="password" class="form-input" placeholder="Choose a secure password" required>
+                                </div>
+                                
+                                <div class="sso-options">
+                                    <button type="button" class="sso-button sso-button--google">
+                                        <span class="sso-icon">G</span>
+                                        Continue with Google
+                                    </button>
+                                    <button type="button" class="sso-button sso-button--apple">
+                                        <span class="sso-icon">🍎</span>
+                                        Continue with Apple
+                                    </button>
+                                </div>
+                                
+                                <button type="button" class="checkout__next" onclick="nextStep()">
+                                    Continue to Payment
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Step 2: Payment -->
+                        <div class="checkout__step" id="step2">
+                            <div class="step-header">
+                                <div class="step-number">2</div>
+                                <h3 class="step-title">Payment details</h3>
+                            </div>
+                            
+                            <form class="checkout-form">
+                                <div class="form-group">
+                                    <label for="cardNumber" class="form-label">Card number</label>
+                                    <input type="text" id="cardNumber" class="form-input" placeholder="1234 5678 9012 3456">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiry" class="form-label">Expiry</label>
+                                        <input type="text" id="expiry" class="form-input" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvc" class="form-label">CVC</label>
+                                        <input type="text" id="cvc" class="form-input" placeholder="123">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="coupon" class="form-label">Coupon code (optional)</label>
+                                    <div class="coupon-input">
+                                        <input type="text" id="coupon" class="form-input" placeholder="Enter code">
+                                        <button type="button" class="coupon-apply">Apply</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group form-group--checkbox">
+                                    <input type="checkbox" id="terms" class="form-checkbox" required>
+                                    <label for="terms" class="form-label form-label--checkbox">
+                                        I agree to the <a href="#" class="form-link">Terms of Service</a> and <a href="#" class="form-link">Privacy Policy</a>
+                                    </label>
+                                </div>
+                                
+                                <button type="button" class="checkout__complete" onclick="completePayment()">
+                                    <span class="checkout__complete-text">Complete Payment</span>
+                                    <span class="checkout__complete-price" id="finalPrice">€19.99</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="checkout__sidebar">
+                    <div class="order-summary" id="orderSummary">
+                        <h3 class="order-summary__title">Order Summary</h3>
+                        
+                        <div class="order-item">
+                            <span class="order-item__name" id="orderItemName">Single Test Unlock</span>
+                            <span class="order-item__price" id="orderItemPrice">€19.99</span>
+                        </div>
+                        
+                        <div class="order-discount" id="orderDiscount" style="display: none;">
+                            <span class="order-discount__name">Discount</span>
+                            <span class="order-discount__amount">-€5.00</span>
+                        </div>
+                        
+                        <div class="order-vat">
+                            <span class="order-vat__name">VAT</span>
+                            <span class="order-vat__amount" id="orderVat">€3.80</span>
+                        </div>
+                        
+                        <div class="order-total">
+                            <span class="order-total__name">Total</span>
+                            <span class="order-total__amount" id="orderTotal">€23.79</span>
+                        </div>
+                        
+                        <div class="order-guarantee">
+                            <div class="guarantee-icon">💯</div>
+                            <p class="guarantee-text">30-day money-back guarantee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="faq__container">
+                <h2 class="faq__title">Frequently Asked Questions</h2>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Can I get a refund?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We offer a 30-day money-back guarantee. If you're not satisfied with your insights, we'll refund your payment in full.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>How do I cancel my subscription?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can cancel anytime from your account settings. No questions asked, no cancellation fees. Your access continues until the end of your billing period.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>How do child profiles work?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Child profiles include age-appropriate assessments and insights. You maintain full control and privacy. Perfect for understanding your child's learning and growth patterns.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Is my data private and secure?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely. We use bank-level encryption, never sell your data, and you can delete your account anytime. Your insights are for personal development only.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Is this medical advice?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No, SelfMap provides educational insights for personal growth only. We're not a medical service and don't diagnose conditions. Always consult professionals for health concerns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials & Social Proof -->
+        <section class="testimonials">
+            <div class="testimonials__container">
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "The Growth Pass completely changed how I understand myself. The personalized training plans are actually doable and I'm seeing real progress."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">M</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Maria Chen</div>
+                                <div class="testimonial-title">Product Designer</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "Finally, insights that make sense and feel authentic. My family plan helps us understand each other better and grow together."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">D</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">David Rodriguez</div>
+                                <div class="testimonial-title">Father of 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-proof">
+                    <p class="social-proof-text">Join 10,000+ members growing this month</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-cta-dock" id="mobileCta" style="display: none;">
+        <button class="mobile-cta-button" onclick="scrollToPlans()">
+            <span class="mobile-cta-text">Choose Plan</span>
+            <span class="mobile-cta-price">from €17.99</span>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__links">
+                <a href="#" class="footer__link">Terms of Service</a>
+                <a href="#" class="footer__link">Privacy Policy</a>
+                <a href="#" class="footer__link">Contact</a>
+            </div>
+            <p class="footer__disclaimer">
+                Not medical advice • For personal development only • Cancel anytime
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/pay.js"></script>
+</body>
+</html>

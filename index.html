@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelfMap - Discover Your Potential</title>
+    <meta name="description" content="Advanced psychological assessments with stunning 3D insights. Unlock your cognitive potential with science-backed evaluations.">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800;900&family=SF+Pro+Text:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <!-- Ultra-Modern Navigation -->
+    <nav class="navbar" id="mainNav">
+        <div class="navbar__container">
+            <div class="navbar__brand">
+                <div class="navbar__logo">
+                    <div class="logo-sphere" aria-hidden="true">
+                        <div class="sphere-inner"></div>
+                        <div class="sphere-glow"></div>
+                    </div>
+                    <span class="navbar__title">SelfMap</span>
+                </div>
+            </div>
+            
+            <div class="navbar__menu">
+                <a href="#assessments" class="navbar__link">
+                    <span class="navbar__link-text">Assessments</span>
+                    <div class="navbar__link-indicator"></div>
+                </a>
+                <a href="#insights" class="navbar__link">
+                    <span class="navbar__link-text">Insights</span>
+                    <div class="navbar__link-indicator"></div>
+                </a>
+                <a href="#progress" class="navbar__link">
+                    <span class="navbar__link-text">Progress</span>
+                    <div class="navbar__link-indicator"></div>
+                </a>
+                <a href="#premium" class="navbar__link">
+                    <span class="navbar__link-text">Premium</span>
+                    <div class="navbar__link-indicator"></div>
+                </a>
+            </div>
+            
+            <div class="navbar__actions">
+                <button class="btn-ghost">Sign In</button>
+                <a href="pages/tests.html" class="btn-primary">
+                    <span>Start Assessment</span>
+                    <div class="btn-glow"></div>
+                </a>
+            </div>
+            
+            <button class="navbar__mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="navbar__mobile-menu" id="mobileMenu">
+            <div class="navbar__mobile-links">
+                <a href="#assessments" class="navbar__mobile-link">Assessments</a>
+                <a href="#insights" class="navbar__mobile-link">Insights</a>
+                <a href="#progress" class="navbar__mobile-link">Progress</a>
+                <a href="#premium" class="navbar__mobile-link">Premium</a>
+            </div>
+            <div class="navbar__mobile-actions">
+                <button class="btn-ghost">Sign In</button>
+                <a href="pages/tests.html" class="btn-primary">
+                    <span>Start Assessment</span>
+                    <div class="btn-glow"></div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Immersive 3D Hero -->
+    <section class="hero-immersive" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="heroParticles"></div>
+            <div class="hero-mesh" id="heroMesh"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <div class="badge-glow"></div>
+                <span class="badge-text">AI-Powered Assessments</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="title-line">Discover Your</span>
+                <span class="title-line title-highlight">True Potential</span>
+            </h1>
+            
+            <p class="hero-description">
+                Advanced psychological assessments with stunning 3D visualizations. 
+                Unlock deep insights into your cognitive abilities, personality, and growth potential.
+            </p>
+            
+            <div class="hero-cta-group">
+                <a href="pages/tests.html" class="cta-primary" id="startAssessment">
+                    <span class="cta-text">Start Your Journey</span>
+                    <div class="cta-glow"></div>
+                    <div class="cta-particles"></div>
+                </a>
+                
+                <button class="cta-secondary">
+                    <svg class="play-icon" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <span>Watch Demo</span>
+                </button>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">2.5M+</div>
+                    <div class="stat-label">Assessments</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="visual-container">
+                <div class="brain-sphere">
+                    <div class="sphere-core"></div>
+                    <div class="sphere-rings">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="ring ring-3"></div>
+                    </div>
+                    <div class="neural-connections">
+                        <div class="connection connection-1"></div>
+                        <div class="connection connection-2"></div>
+                        <div class="connection connection-3"></div>
+                        <div class="connection connection-4"></div>
+                    </div>
+                </div>
+                
+                <div class="floating-cards">
+                    <div class="assessment-card card-iq">
+                        <div class="card-icon">🧠</div>
+                        <div class="card-title">Intelligence</div>
+                    </div>
+                    <div class="assessment-card card-eq">
+                        <div class="card-icon">❤️</div>
+                        <div class="card-title">Emotional</div>
+                    </div>
+                    <div class="assessment-card card-personality">
+                        <div class="card-icon">✨</div>
+                        <div class="card-title">Personality</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Assessment Gallery -->
+    <section class="assessments" id="assessments">
+        <div class="assessments-container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span>Professional Grade</span>
+                </div>
+                <h2 class="section-title">Choose Your Assessment</h2>
+                <p class="section-description">
+                    Each assessment uses advanced algorithms and 3D visualizations to provide 
+                    unprecedented insights into your cognitive and emotional landscape.
+                </p>
+            </div>
+            
+            <div class="assessment-grid" id="assessmentGrid">
+                <div class="assessment-cube" data-assessment="iq">
+                    <div class="cube-face cube-front">
+                        <div class="cube-image">
+                            <img src="assets/img/tests/IQ.png" alt="Intelligence Assessment" loading="lazy">
+                        </div>
+                        <div class="cube-content">
+                            <h3 class="cube-title">Intelligence</h3>
+                            <p class="cube-subtitle">Cognitive Analysis</p>
+                            <div class="cube-meta">
+                                <span class="cube-time">8 min</span>
+                                <span class="cube-difficulty">Advanced</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cube-face cube-back">
+                        <div class="cube-details">
+                            <h4>Intelligence Assessment</h4>
+                            <p>Comprehensive cognitive evaluation including pattern recognition, logical reasoning, and problem-solving capabilities.</p>
+                            <a href="pages/test.html?id=iq" class="cube-cta">Start Assessment</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="assessment-cube" data-assessment="eq">
+                    <div class="cube-face cube-front">
+                        <div class="cube-image">
+                            <img src="assets/img/tests/EQ.png" alt="Emotional Intelligence" loading="lazy">
+                        </div>
+                        <div class="cube-content">
+                            <h3 class="cube-title">Emotional Intelligence</h3>
+                            <p class="cube-subtitle">EQ Analysis</p>
+                            <div class="cube-meta">
+                                <span class="cube-time">6 min</span>
+                                <span class="cube-difficulty">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cube-face cube-back">
+                        <div class="cube-details">
+                            <h4>Emotional Intelligence</h4>
+                            <p>Measure your ability to understand, use, and manage emotions effectively in various situations.</p>
+                            <a href="pages/test.html?id=eq" class="cube-cta">Start Assessment</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="assessment-cube" data-assessment="personality">
+                    <div class="cube-face cube-front">
+                        <div class="cube-image">
+                            <img src="assets/img/tests/Personality.png" alt="Personality Assessment" loading="lazy">
+                        </div>
+                        <div class="cube-content">
+                            <h3 class="cube-title">Personality</h3>
+                            <p class="cube-subtitle">Trait Analysis</p>
+                            <div class="cube-meta">
+                                <span class="cube-time">7 min</span>
+                                <span class="cube-difficulty">Beginner</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cube-face cube-back">
+                        <div class="cube-details">
+                            <h4>Personality Profile</h4>
+                            <p>Deep dive into your personality traits, behavioral patterns, and psychological preferences.</p>
+                            <a href="pages/test.html?id=personality" class="cube-cta">Start Assessment</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="assessment-cube" data-assessment="stress">
+                    <div class="cube-face cube-front">
+                        <div class="cube-image">
+                            <img src="assets/img/tests/Stress.png" alt="Stress Management" loading="lazy">
+                        </div>
+                        <div class="cube-content">
+                            <h3 class="cube-title">Stress & Wellness</h3>
+                            <p class="cube-subtitle">Mental Health</p>
+                            <div class="cube-meta">
+                                <span class="cube-time">4 min</span>
+                                <span class="cube-difficulty">Essential</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cube-face cube-back">
+                        <div class="cube-details">
+                            <h4>Stress Assessment</h4>
+                            <p>Evaluate your stress levels, coping mechanisms, and overall mental wellness state.</p>
+                            <a href="pages/test.html?id=stress" class="cube-cta">Start Assessment</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="assessment-cube" data-assessment="adhd">
+                    <div class="cube-face cube-front">
+                        <div class="cube-image">
+                            <img src="assets/img/tests/ADHD.png" alt="Focus Assessment" loading="lazy">
+                        </div>
+                        <div class="cube-content">
+                            <h3 class="cube-title">Focus & ADHD</h3>
+                            <p class="cube-subtitle">Attention Analysis</p>
+                            <div class="cube-meta">
+                                <span class="cube-time">5 min</span>
+                                <span class="cube-difficulty">Clinical</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cube-face cube-back">
+                        <div class="cube-details">
+                            <h4>Attention Assessment</h4>
+                            <p>Comprehensive evaluation of attention span, focus patterns, and potential ADHD indicators.</p>
+                            <a href="pages/test.html?id=adhd" class="cube-cta">Start Assessment</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="assessment-cube" data-assessment="relationships">
+                    <div class="cube-face cube-front">
+                        <div class="cube-image">
+                            <img src="assets/img/tests/relationships.png" alt="Relationship Analysis" loading="lazy">
+                        </div>
+                        <div class="cube-content">
+                            <h3 class="cube-title">Relationships</h3>
+                            <p class="cube-subtitle">Social Dynamics</p>
+                            <div class="cube-meta">
+                                <span class="cube-time">6 min</span>
+                                <span class="cube-difficulty">Personal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cube-face cube-back">
+                        <div class="cube-details">
+                            <h4>Relationship Patterns</h4>
+                            <p>Understand your attachment style, communication patterns, and relationship dynamics.</p>
+                            <a href="pages/test.html?id=relationships" class="cube-cta">Start Assessment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="assessment-navigator">
+                <button class="nav-btn nav-prev" id="assessmentPrev">
+                    <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <div class="nav-dots" id="assessmentDots"></div>
+                <button class="nav-btn nav-next" id="assessmentNext">
+                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Insights Showcase -->
+    <section class="insights" id="insights">
+        <div class="insights-container">
+            <div class="insights-visual">
+                <div class="holographic-display">
+                    <canvas class="holo-canvas" id="holoCanvas"></canvas>
+                    <div class="holo-interface">
+                        <div class="interface-ring ring-outer"></div>
+                        <div class="interface-ring ring-middle"></div>
+                        <div class="interface-ring ring-inner"></div>
+                        <div class="data-points">
+                            <div class="data-point point-1" data-label="Cognitive Speed"></div>
+                            <div class="data-point point-2" data-label="Emotional Depth"></div>
+                            <div class="data-point point-3" data-label="Creative Flow"></div>
+                            <div class="data-point point-4" data-label="Social Intelligence"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="insights-content">
+                <div class="section-badge">
+                    <span>AI-Powered</span>
+                </div>
+                <h2 class="section-title">3D Mind Mapping</h2>
+                <p class="section-description">
+                    Experience your psychological profile like never before. Our advanced 3D visualization 
+                    engine creates stunning, interactive maps of your cognitive and emotional landscape.
+                </p>
+                
+                <div class="insights-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Real-time Analysis</h4>
+                            <p>Live processing of your responses with instant 3D visualization</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Predictive Insights</h4>
+                            <p>AI algorithms predict your potential and growth trajectories</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Multi-dimensional</h4>
+                            <p>Explore your mind from every angle with interactive 3D models</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="cta-explore">
+                    <span>Explore Demo</span>
+                    <div class="explore-glow"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Process Flow -->
+    <section class="process" id="process">
+        <div class="process-container">
+            <div class="section-header center">
+                <div class="section-badge">
+                    <span>Simple & Powerful</span>
+                </div>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-description">
+                    Three simple steps to unlock profound insights about yourself
+                </p>
+            </div>
+            
+            <div class="process-flow">
+                <div class="flow-line" id="flowLine">
+                    <div class="flow-progress" id="flowProgress"></div>
+                </div>
+                
+                <div class="process-step" data-step="1">
+                    <div class="step-visual">
+                        <div class="step-sphere">
+                            <div class="sphere-content">
+                                <svg class="step-icon" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="step-glow"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Take Assessment</h3>
+                        <p class="step-description">Complete scientifically-designed questions in just 4-8 minutes</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-step="2">
+                    <div class="step-visual">
+                        <div class="step-sphere">
+                            <div class="sphere-content">
+                                <svg class="step-icon" viewBox="0 0 24 24">
+                                    <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="step-glow"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">AI Analysis</h3>
+                        <p class="step-description">Advanced algorithms process your responses and create 3D visualizations</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-step="3">
+                    <div class="step-visual">
+                        <div class="step-sphere">
+                            <div class="sphere-content">
+                                <svg class="step-icon" viewBox="0 0 24 24">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="step-glow"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Unlock Potential</h3>
+                        <p class="step-description">Receive personalized insights and actionable growth recommendations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Growth Section -->
+    <section class="family" id="family">
+        <div class="family__container">
+            <div class="family__content">
+                <h2 class="family__title">Growth for the Whole Family</h2>
+                <ul class="family__features">
+                    <li class="family__feature">
+                        <svg class="family__feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                        </svg>
+                        Add one child profile free
+                    </li>
+                    <li class="family__feature">
+                        <svg class="family__feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                        </svg>
+                        Follow learning & emotional skills
+                    </li>
+                    <li class="family__feature">
+                        <svg class="family__feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                        </svg>
+                        Upgrade for more seats
+                    </li>
+                </ul>
+                <a href="pages/pay.html" class="family__cta">
+                    Explore Family Plan
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="family__visual">
+                <div class="family__glow"></div>
+                <div class="family__image-container">
+                    <img src="assets/img/parent-kid.png" alt="Parent and child learning together" class="family__image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof" id="social-proof">
+        <div class="social-proof__container">
+            <div class="social-proof__stats">
+                <div class="social-proof__stat">
+                    <span class="social-proof__stat-number" data-count="50000">0</span>
+                    <span class="social-proof__stat-label">Tests Taken</span>
+                </div>
+                <div class="social-proof__stat">
+                    <span class="social-proof__stat-number" data-count="10000">0</span>
+                    <span class="social-proof__stat-label">Active Subscribers</span>
+                </div>
+            </div>
+
+            <div class="social-proof__testimonials">
+                <div class="social-proof__testimonial">
+                    <div class="social-proof__testimonial-avatar" aria-hidden="true"></div>
+                    <blockquote class="social-proof__testimonial-quote">
+                        "SelfMap helped me understand my learning patterns and build better habits. The insights are incredible."
+                    </blockquote>
+                    <cite class="social-proof__testimonial-author">Sarah M., Parent & Educator</cite>
+                </div>
+                
+                <div class="social-proof__testimonial">
+                    <div class="social-proof__testimonial-avatar" aria-hidden="true"></div>
+                    <blockquote class="social-proof__testimonial-quote">
+                        "My daughter loves the Kids Zone tests, and I can track her emotional development easily."
+                    </blockquote>
+                    <cite class="social-proof__testimonial-author">David L., Father of Two</cite>
+                </div>
+            </div>
+
+            <div class="social-proof__trust">
+                <div class="social-proof__trust-badge" aria-label="GDPR Compliant">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    GDPR Compliant
+                </div>
+                <div class="social-proof__trust-badge" aria-label="256-bit SSL Encryption">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="11" width="18" height="10" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="16" r="1" fill="currentColor"/>
+                        <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    256-bit SSL
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Teaser -->
+    <section class="pricing" id="pricing">
+        <div class="pricing__container">
+            <h2 class="pricing__title">Choose Your Growth Path</h2>
+            
+            <div class="pricing__grid">
+                <div class="pricing__card">
+                    <div class="pricing__card-header">
+                        <h3 class="pricing__card-title">Single Test</h3>
+                        <div class="pricing__card-price">
+                            <span class="pricing__card-currency">$</span>
+                            <span class="pricing__card-amount">9</span>
+                        </div>
+                    </div>
+                    <ul class="pricing__card-features">
+                        <li>One comprehensive test</li>
+                        <li>Detailed analytics report</li>
+                        <li>Basic recommendations</li>
+                    </ul>
+                    <button class="pricing__card-cta">Get Started</button>
+                </div>
+
+                <div class="pricing__card pricing__card--featured">
+                    <div class="pricing__card-badge">Most Popular</div>
+                    <div class="pricing__card-header">
+                        <h3 class="pricing__card-title">Growth Pass</h3>
+                        <div class="pricing__card-price">
+                            <span class="pricing__card-currency">$</span>
+                            <span class="pricing__card-amount">29</span>
+                            <span class="pricing__card-period">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="pricing__card-features">
+                        <li>All tests unlimited</li>
+                        <li>Advanced analytics</li>
+                        <li>Growth training programs</li>
+                        <li>Progress tracking</li>
+                    </ul>
+                    <button class="pricing__card-cta">Start Free Trial</button>
+                </div>
+
+                <div class="pricing__card">
+                    <div class="pricing__card-header">
+                        <h3 class="pricing__card-title">Family Plan</h3>
+                        <div class="pricing__card-price">
+                            <span class="pricing__card-currency">$</span>
+                            <span class="pricing__card-amount">49</span>
+                            <span class="pricing__card-period">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="pricing__card-features">
+                        <li>Up to 5 family members</li>
+                        <li>Kids Zone included</li>
+                        <li>Family progress dashboard</li>
+                        <li>Parental insights</li>
+                    </ul>
+                    <button class="pricing__card-cta">Explore Family</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2C20 2 24 4 27 8C28 10 28 12 27 14C26 16 24 18 22 19C20 20 18 20 16 20C14 20 12 20 10 19C8 18 6 16 5 14C4 12 4 10 5 8C8 4 12 2 16 2Z" fill="url(#logoGradient)"/>
+                        </svg>
+                        <span>SelfMap</span>
+                    </div>
+                    <p class="footer__tagline">Your Growth, Mapped.</p>
+                </div>
+
+                <nav class="footer__nav" aria-label="Footer navigation">
+                    <div class="footer__nav-group">
+                        <h4 class="footer__nav-title">Product</h4>
+                        <ul class="footer__nav-list">
+                            <li><a href="#tests-orbit" class="footer__nav-link">Tests</a></li>
+                            <li><a href="/analytics.html" class="footer__nav-link">Analytics</a></li>
+                            <li><a href="/training.html" class="footer__nav-link">Training</a></li>
+                            <li><a href="#family" class="footer__nav-link">Family</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__nav-group">
+                        <h4 class="footer__nav-title">Company</h4>
+                        <ul class="footer__nav-list">
+                            <li><a href="/about.html" class="footer__nav-link">About</a></li>
+                            <li><a href="/privacy.html" class="footer__nav-link">Privacy</a></li>
+                            <li><a href="/terms.html" class="footer__nav-link">Terms</a></li>
+                            <li><a href="/support.html" class="footer__nav-link">Support</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 SelfMap Growth Hub. All rights reserved.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

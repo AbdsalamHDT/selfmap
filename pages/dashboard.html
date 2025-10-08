@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SelfMap Growth Hub</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <meta name="description" content="Your personalized growth dashboard with insights, progress tracking, and next steps.">
+</head>
+
+<body>
+    <!-- Glass Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__container">
+            <div class="navbar__brand">
+                <img src="../assets/img/logo.png" alt="SelfMap Logo" class="navbar__logo">
+                <span class="navbar__title">SelfMap</span>
+            </div>
+            
+            <div class="navbar__menu">
+                <a href="../index.html" class="navbar__link">Home</a>
+                <a href="tests.html" class="navbar__link">Tests</a>
+                <a href="#" class="navbar__link navbar__link--active">Dashboard</a>
+                <a href="pay.html" class="navbar__link">Pricing</a>
+            </div>
+
+            <button class="navbar__hamburger" id="mobileToggle" aria-label="Toggle menu">
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+            </button>
+
+            <div class="navbar__mobile-menu">
+                <a href="../index.html" class="navbar__mobile-link">Home</a>
+                <a href="tests.html" class="navbar__mobile-link">Tests</a>
+                <a href="#" class="navbar__mobile-link navbar__mobile-link--active">Dashboard</a>
+                <a href="pay.html" class="navbar__mobile-link">Pricing</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Overview Section -->
+        <section class="hero-overview">
+            <div class="hero-overview__background">
+                <div class="hero-overview__aurora"></div>
+                <div class="hero-overview__particles"></div>
+                <div class="hero-overview__radar">
+                    <svg viewBox="0 0 400 200" class="radar-svg">
+                        <defs>
+                            <linearGradient id="radarGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+                                <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.2"/>
+                                <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.1"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M 50 150 A 150 150 0 0 1 350 150" fill="none" stroke="url(#radarGradient)" stroke-width="2"/>
+                        <path d="M 75 135 A 125 125 0 0 1 325 135" fill="none" stroke="url(#radarGradient)" stroke-width="1" opacity="0.6"/>
+                        <path d="M 100 120 A 100 100 0 0 1 300 120" fill="none" stroke="url(#radarGradient)" stroke-width="1" opacity="0.4"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="hero-overview__container">
+                <div class="hero-overview__content">
+                    <div class="hero-overview__left">
+                        <h1 class="hero-overview__greeting" id="userGreeting">Welcome back, Explorer</h1>
+                        <p class="hero-overview__subtitle">Your growth journey continues</p>
+                    </div>
+                    
+                    <div class="hero-overview__right">
+                        <div class="status-chips">
+                            <div class="status-chip">
+                                <div class="status-chip__icon">📊</div>
+                                <span class="status-chip__text" id="testsCompleted">1 Test Completed</span>
+                            </div>
+                            <div class="status-chip">
+                                <div class="status-chip__icon">🎯</div>
+                                <span class="status-chip__text">Next Mission Ready</span>
+                            </div>
+                            <div class="status-chip">
+                                <div class="status-chip__icon">🔒</div>
+                                <span class="status-chip__text">Private & Secure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Stats Panel -->
+        <section class="current-stats">
+            <div class="current-stats__container">
+                <div class="stats-card">
+                    <div class="stats-card__header">
+                        <h2 class="stats-card__title">Current Status</h2>
+                        <div class="stats-card__last-test" id="lastTestName">Intelligence Assessment</div>
+                    </div>
+                    
+                    <div class="stats-card__content">
+                        <div class="stats-card__left">
+                            <div class="radial-progress" id="radialProgress">
+                                <svg class="radial-progress__svg" viewBox="0 0 200 200">
+                                    <defs>
+                                        <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#3b82f6"/>
+                                            <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                            <stop offset="100%" style="stop-color:#06b6d4"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8"/>
+                                    <circle cx="100" cy="100" r="80" fill="none" stroke="url(#progressGradient)" stroke-width="8" 
+                                            stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="502" 
+                                            class="radial-progress__circle" id="progressCircle"/>
+                                </svg>
+                                <div class="radial-progress__content">
+                                    <div class="radial-progress__percentage" id="overallScore">72</div>
+                                    <div class="radial-progress__label">Overall</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stats-card__right">
+                            <div class="stats-card__interpretation" id="scoreInterpretation">
+                                Strong trajectory — above average habits
+                            </div>
+                            <div class="stats-card__details">
+                                <div class="stat-detail">
+                                    <div class="stat-detail__label">Completed</div>
+                                    <div class="stat-detail__value" id="completionDate">Today</div>
+                                </div>
+                                <div class="stat-detail">
+                                    <div class="stat-detail__label">Growth Band</div>
+                                    <div class="stat-detail__value" id="growthBand">High Performer</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personalized Path -->
+        <section class="personalized-path">
+            <div class="personalized-path__container">
+                <h2 class="section-title">Your Personalized Path</h2>
+                
+                <div class="mission-timeline">
+                    <div class="mission-step mission-step--completed" data-mission="1">
+                        <div class="mission-step__connector"></div>
+                        <div class="mission-step__icon">✅</div>
+                        <div class="mission-step__content">
+                            <h3 class="mission-step__title">Complete your first test</h3>
+                            <p class="mission-step__description">Establish your baseline and unlock insights</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mission-step mission-step--current" data-mission="2">
+                        <div class="mission-step__connector"></div>
+                        <div class="mission-step__icon">🎯</div>
+                        <div class="mission-step__content">
+                            <h3 class="mission-step__title">Unlock your Growth Map slice</h3>
+                            <p class="mission-step__description">Dive deeper into your personality dimensions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mission-step mission-step--locked" data-mission="3">
+                        <div class="mission-step__connector"></div>
+                        <div class="mission-step__icon">📈</div>
+                        <div class="mission-step__content">
+                            <h3 class="mission-step__title">Add your first Training Habit</h3>
+                            <p class="mission-step__description">Start building positive change patterns</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mission-step mission-step--locked" data-mission="4">
+                        <div class="mission-step__connector"></div>
+                        <div class="mission-step__icon">🏆</div>
+                        <div class="mission-step__content">
+                            <h3 class="mission-step__title">Complete 3 dimensions to reveal your Badge</h3>
+                            <p class="mission-step__description">Earn your first Growth Explorer achievement</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Tracker -->
+        <section class="progress-tracker">
+            <div class="progress-tracker__container">
+                <div class="progress-card">
+                    <div class="progress-card__header">
+                        <h2 class="progress-card__title">Your Growth Map</h2>
+                        <div class="progress-card__status">
+                            <span class="progress-bar">
+                                <span class="progress-bar__fill" id="dimensionsProgress" style="width: 12.5%;"></span>
+                            </span>
+                            <span class="progress-text" id="dimensionsText">1 / 8 Dimensions Completed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="radar-chart-container">
+                        <canvas id="radarChart" class="radar-chart" width="400" height="400"></canvas>
+                    </div>
+                    
+                    <div class="dimensions-grid" id="dimensionsGrid">
+                        <!-- Dimensions will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Mission Card -->
+        <section class="next-mission">
+            <div class="next-mission__container">
+                <div class="next-mission-card" id="nextMissionCard">
+                    <div class="next-mission-card__header">
+                        <div class="next-mission-card__icon" id="nextTestIcon">❤️</div>
+                        <div class="next-mission-card__badge">Recommended Next</div>
+                    </div>
+                    
+                    <div class="next-mission-card__content">
+                        <h3 class="next-mission-card__title" id="nextTestTitle">Emotional Intelligence Test</h3>
+                        <p class="next-mission-card__teaser" id="nextTestTeaser">
+                            Discover how emotions drive your daily choices and relationships
+                        </p>
+                    </div>
+                    
+                    <a href="#" class="next-mission-card__cta" id="nextTestCta">
+                        <span>Start Test</span>
+                        <div class="cta-glow"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training & Actions -->
+        <section class="training-actions">
+            <div class="training-actions__container">
+                <h2 class="section-title">Your Training Plan</h2>
+                
+                <div class="training-grid" id="trainingGrid">
+                    <!-- Training habits will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Streaks & Achievements -->
+        <section class="streaks-achievements">
+            <div class="streaks-achievements__container">
+                <div class="achievement-cards">
+                    <div class="achievement-card">
+                        <div class="achievement-card__header">
+                            <div class="achievement-card__icon">🔥</div>
+                            <h3 class="achievement-card__title">Current Streak</h3>
+                        </div>
+                        <div class="achievement-card__value" id="streakCounter">3</div>
+                        <div class="achievement-card__label">Days Active</div>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-card__header">
+                            <div class="achievement-card__icon">🏅</div>
+                            <h3 class="achievement-card__title">Badge Progress</h3>
+                        </div>
+                        <div class="achievement-card__badge" id="currentBadge">
+                            <div class="badge-placeholder">
+                                <div class="badge-icon">🌟</div>
+                                <div class="badge-name">Growth Explorer</div>
+                            </div>
+                        </div>
+                        <div class="achievement-card__progress">
+                            <span class="progress-bar">
+                                <span class="progress-bar__fill" style="width: 33%;"></span>
+                            </span>
+                            <span class="progress-text">1 / 3 Tests</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Family & Profiles -->
+        <section class="family-profiles" id="familyProfiles" style="display: none;">
+            <div class="family-profiles__container">
+                <h2 class="section-title">Family Profiles</h2>
+                
+                <div class="profiles-grid">
+                    <div class="profile-card profile-card--add">
+                        <div class="profile-card__icon">👶</div>
+                        <h3 class="profile-card__title">Add Child Profile</h3>
+                        <p class="profile-card__description">
+                            Track your child's creativity & learning with kids-friendly tests
+                        </p>
+                        <button class="profile-card__cta">Add Profile</button>
+                    </div>
+                    
+                    <!-- Child profiles will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__links">
+                <a href="#" class="footer__link">Terms</a>
+                <a href="#" class="footer__link">Privacy</a>
+                <a href="#" class="footer__link">Not medical advice</a>
+                <a href="#" class="footer__link">Contact</a>
+            </div>
+            <p class="footer__disclaimer">
+                This dashboard shows your assessment results for informational purposes only. 
+                Not intended as medical or professional advice.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

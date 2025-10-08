@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<h            <div class="navbar__menu">
+                <a href="../index.html" class="navbar__link">Home</a>
+                <a href="tests.html" class="navbar__link">Tests</a>
+                <a href="dashboard.html" class="navbar__link">Dashboard</a>
+                <a href="pay.html" class="navbar__link">Pricing</a>
+                <a href="pay.html" class="navbar__cta">Get Started</a>
+            </div>g="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests Library - SelfMap Growth Hub</title>
+    <link rel="stylesheet" href="../css/tests.css">
+    <meta name="description" content="Choose from 8 professional assessments to unlock your growth potential - IQ, EQ, Personality, and more.">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar__container">
+            <div class="navbar__brand">
+                <img src="../assets/img/logo.png" alt="SelfMap Logo" class="navbar__logo">
+                <span class="navbar__title">SelfMap</span>
+            </div>
+            
+            <div class="navbar__menu">
+                <a href="../index.html" class="navbar__link">Home</a>
+                <a href="tests.html" class="navbar__link navbar__link--active">Tests</a>
+                <a href="pay.html" class="navbar__link">Pricing</a>
+                <a href="../index.html#about" class="navbar__link">About</a>
+                <a href="pay.html" class="navbar__cta">Get Started</a>
+            </div>
+
+            <button class="navbar__hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+            </button>
+
+            <div class="navbar__mobile-menu">
+                <a href="../index.html" class="navbar__mobile-link">Home</a>
+                <a href="tests.html" class="navbar__mobile-link navbar__mobile-link--active">Tests</a>
+                <a href="pay.html" class="navbar__mobile-link">Pricing</a>
+                <a href="../index.html#about" class="navbar__mobile-link">About</a>
+                <a href="pay.html" class="navbar__mobile-cta">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1 id="hero-title" class="hero__title">
+                        Choose Your Test
+                    </h1>
+                    <p class="hero__subtitle">
+                        Every test reveals another part of your growth map.
+                    </p>
+                </div>
+                <div class="hero__visual">
+                    <div class="hero__constellation">
+                        <div class="hero__star hero__star--1"></div>
+                        <div class="hero__star hero__star--2"></div>
+                        <div class="hero__star hero__star--3"></div>
+                        <div class="hero__star hero__star--4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tests Constellation -->
+        <section class="tests" aria-labelledby="tests-title">
+            <div class="tests__container">
+                <h2 id="tests-title" class="tests__title visually-hidden">
+                    Available Assessments
+                </h2>
+                
+                <div class="constellation" role="region" aria-label="Interactive test selection">
+                    <!-- Central Hub -->
+                    <div class="constellation__hub">
+                        <div class="constellation__hub-core">
+                            <div class="constellation__hub-pulse"></div>
+                            <span class="constellation__hub-text">Your Journey</span>
+                        </div>
+                    </div>
+
+                    <!-- Test Nodes -->
+                    <div class="constellation__node constellation__node--iq" 
+                         role="button" 
+                         tabindex="0" 
+                         aria-label="IQ Test - Cognitive abilities and problem-solving skills"
+                         data-test="iq">
+                        <div class="constellation__node-inner">
+                            <div class="constellation__node-icon">
+                                <img src="../assets/img/tests/IQ.png" alt="IQ Test Icon" class="constellation__icon">
+                            </div>
+                            <div class="constellation__node-pulse"></div>
+                        </div>
+                        <div class="constellation__tooltip">
+                            <h3>IQ Test</h3>
+                            <p>Cognitive abilities and problem-solving skills</p>
+                            <button class="constellation__cta">Start Test →</button>
+                        </div>
+                        <div class="constellation__connector"></div>
+                    </div>
+
+                    <div class="constellation__node constellation__node--adhd" 
+                         role="button" 
+                         tabindex="0" 
+                         aria-label="ADHD & Focus - Attention patterns and focus assessment"
+                         data-test="adhd">
+                        <div class="constellation__node-inner">
+                            <div class="constellation__node-icon">
+                                <img src="../assets/img/tests/ADHD.png" alt="ADHD Test Icon" class="constellation__icon">
+                            </div>
+                            <div class="constellation__node-pulse"></div>
+                        </div>
+                        <div class="constellation__tooltip">
+                            <h3>ADHD & Focus</h3>
+                            <p>Attention patterns and focus assessment</p>
+                            <button class="constellation__cta">Start Test →</button>
+                        </div>
+                        <div class="constellation__connector"></div>
+                    </div>
+
+                    <div class="constellation__node constellation__node--eq" 
+                         role="button" 
+                         tabindex="0" 
+                         aria-label="Emotional Intelligence - Awareness, empathy, regulation skills"
+                         data-test="eq">
+                        <div class="constellation__node-inner">
+                            <div class="constellation__node-icon">
+                                <img src="../assets/img/tests/EQ.png" alt="EQ Test Icon" class="constellation__icon">
+                            </div>
+                            <div class="constellation__node-pulse"></div>
+                        </div>
+                        <div class="constellation__tooltip">
+                            <h3>Emotional Intelligence</h3>
+                            <p>Awareness, empathy, regulation skills</p>
+                            <button class="constellation__cta">Start Test →</button>
+                        </div>
+                        <div class="constellation__connector"></div>
+                    </div>
+
+                    <div class="constellation__node constellation__node--stress" 
+                         role="button" 
+                         tabindex="0" 
+                         aria-label="Stress Assessment - Stress levels and coping mechanisms"
+                         data-test="stress">
+                        <div class="constellation__node-inner">
+                            <div class="constellation__node-icon">
+                                <img src="../assets/img/tests/Stress.png" alt="Stress Test Icon" class="constellation__icon">
+                            </div>
+                            <div class="constellation__node-pulse"></div>
+                        </div>
+                        <div class="constellation__tooltip">
+                            <h3>Stress Assessment</h3>
+                            <p>Stress levels and coping mechanisms</p>
+                            <button class="constellation__cta">Start Test →</button>
+                        </div>
+                        <div class="constellation__connector"></div>
+                    </div>
+
+                    <div class="constellation__node constellation__node--relationships" 
+                         role="button" 
+                         tabindex="0" 
+                         aria-label="Attachment Style - Relationship patterns and attachment needs"
+                         data-test="attach">
+                        <div class="constellation__node-inner">
+                            <div class="constellation__node-icon">
+                                <img src="../assets/img/tests/relationships.png" alt="Relationships Test Icon" class="constellation__icon">
+                            </div>
+                            <div class="constellation__node-pulse"></div>
+                        </div>
+                        <div class="constellation__tooltip">
+                            <h3>Attachment Style</h3>
+                            <p>Relationship patterns and attachment needs</p>
+                            <button class="constellation__cta">Start Test →</button>
+                        </div>
+                        <div class="constellation__connector"></div>
+                    </div>
+
+                    <div class="constellation__node constellation__node--motivation" 
+                         role="button" 
+                         tabindex="0" 
+                         aria-label="Motivation - Drive patterns and goal orientation"
+                         data-test="motivation">
+                        <div class="constellation__node-inner">
+                            <div class="constellation__node-icon">
+                                <img src="../assets/img/tests/motivation.png" alt="Motivation Test Icon" class="constellation__icon">
+                            </div>
+                            <div class="constellation__node-pulse"></div>
+                        </div>
+                        <div class="constellation__tooltip">
+                            <h3>Motivation</h3>
+                            <p>Drive patterns and goal orientation</p>
+                            <button class="constellation__cta">Start Test →</button>
+                        </div>
+                        <div class="constellation__connector"></div>
+                    </div>
+
+                    <div class="constellation__node constellation__node--personality" 
+                         role="button" 
+                         tabindex="0" 
+                         aria-label="Personality - Core traits and behavioral patterns"
+                         data-test="personality">
+                        <div class="constellation__node-inner">
+                            <div class="constellation__node-icon">
+                                <img src="../assets/img/tests/Personality.png" alt="Personality Test Icon" class="constellation__icon">
+                            </div>
+                            <div class="constellation__node-pulse"></div>
+                        </div>
+                        <div class="constellation__tooltip">
+                            <h3>Personality</h3>
+                            <p>Core traits and behavioral patterns</p>
+                            <button class="constellation__cta">Start Test →</button>
+                        </div>
+                        <div class="constellation__connector"></div>
+                    </div>
+
+                    <div class="constellation__node constellation__node--kids" 
+                         role="button" 
+                         tabindex="0" 
+                         aria-label="Kids Assessment - Child development and learning styles"
+                         data-test="kids">
+                        <div class="constellation__node-inner">
+                            <div class="constellation__node-icon">
+                                <img src="../assets/img/tests/Kids.png" alt="Kids Test Icon" class="constellation__icon">
+                            </div>
+                            <div class="constellation__node-pulse"></div>
+                        </div>
+                        <div class="constellation__tooltip">
+                            <h3>Kids Assessment</h3>
+                            <p>Child development and learning styles</p>
+                            <button class="constellation__cta">Start Test →</button>
+                        </div>
+                        <div class="constellation__connector"></div>
+                    </div>
+                </div>
+
+                <!-- Mobile Timeline (hidden on desktop) -->
+                <div class="timeline" role="region" aria-label="Test selection timeline">
+                    <div class="timeline__track"></div>
+                    
+                    <div class="timeline__item" data-test="iq">
+                        <div class="timeline__node">
+                            <img src="../assets/img/tests/IQ.png" alt="IQ Test" class="timeline__icon">
+                        </div>
+                        <div class="timeline__content">
+                            <h3>IQ Test</h3>
+                            <p>Cognitive abilities and problem-solving skills</p>
+                            <button class="timeline__cta">Start Test →</button>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item" data-test="eq">
+                        <div class="timeline__node">
+                            <img src="../assets/img/tests/EQ.png" alt="EQ Test" class="timeline__icon">
+                        </div>
+                        <div class="timeline__content">
+                            <h3>Emotional Intelligence</h3>
+                            <p>Awareness, empathy, regulation skills</p>
+                            <button class="timeline__cta">Start Test →</button>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item" data-test="personality">
+                        <div class="timeline__node">
+                            <img src="../assets/img/tests/Personality.png" alt="Personality Test" class="timeline__icon">
+                        </div>
+                        <div class="timeline__content">
+                            <h3>Personality</h3>
+                            <p>Core traits and behavioral patterns</p>
+                            <button class="timeline__cta">Start Test →</button>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item" data-test="adhd">
+                        <div class="timeline__node">
+                            <img src="../assets/img/tests/ADHD.png" alt="ADHD Test" class="timeline__icon">
+                        </div>
+                        <div class="timeline__content">
+                            <h3>ADHD & Focus</h3>
+                            <p>Attention patterns and focus assessment</p>
+                            <button class="timeline__cta">Start Test →</button>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item" data-test="stress">
+                        <div class="timeline__node">
+                            <img src="../assets/img/tests/Stress.png" alt="Stress Test" class="timeline__icon">
+                        </div>
+                        <div class="timeline__content">
+                            <h3>Stress Assessment</h3>
+                            <p>Stress levels and coping mechanisms</p>
+                            <button class="timeline__cta">Start Test →</button>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item" data-test="attach">
+                        <div class="timeline__node">
+                            <img src="../assets/img/tests/relationships.png" alt="Relationships Test" class="timeline__icon">
+                        </div>
+                        <div class="timeline__content">
+                            <h3>Attachment Style</h3>
+                            <p>Relationship patterns and attachment needs</p>
+                            <button class="timeline__cta">Start Test →</button>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item" data-test="motivation">
+                        <div class="timeline__node">
+                            <img src="../assets/img/tests/motivation.png" alt="Motivation Test" class="timeline__icon">
+                        </div>
+                        <div class="timeline__content">
+                            <h3>Motivation</h3>
+                            <p>Drive patterns and goal orientation</p>
+                            <button class="timeline__cta">Start Test →</button>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item" data-test="kids">
+                        <div class="timeline__node">
+                            <img src="../assets/img/tests/Kids.png" alt="Kids Test" class="timeline__icon">
+                        </div>
+                        <div class="timeline__content">
+                            <h3>Kids Assessment</h3>
+                            <p>Child development and learning styles</p>
+                            <button class="timeline__cta">Start Test →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Family Callout -->
+        <section class="family-callout">
+            <div class="family-callout__container">
+                <div class="family-callout__content">
+                    <div class="family-callout__visual">
+                        <img src="../assets/img/parent-kid.png" alt="Parent and child together" class="family-callout__image">
+                        <div class="family-callout__glow"></div>
+                    </div>
+                    <div class="family-callout__text">
+                        <h2 class="family-callout__title">Track growth together as a family</h2>
+                        <p class="family-callout__description">Add one child profile free.</p>
+                        <button class="family-callout__cta">Explore Family Plan →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <img src="../assets/img/logo.png" alt="SelfMap Logo" class="footer__logo">
+                <span class="footer__title">SelfMap</span>
+            </div>
+            
+            <nav class="footer__nav" role="navigation" aria-label="Footer navigation">
+                <a href="#about" class="footer__link">About</a>
+                <a href="#pricing" class="footer__link">Pricing</a>
+                <a href="#contact" class="footer__link">Contact</a>
+                <a href="#privacy" class="footer__link">Privacy</a>
+            </nav>
+
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Twitter">
+                    <span class="footer__social-icon">𝕏</span>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                    <span class="footer__social-icon">in</span>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                    <span class="footer__social-icon">ig</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/tests.js"></script>
+</body>
+</html>
