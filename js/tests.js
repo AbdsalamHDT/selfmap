@@ -53,6 +53,23 @@ class TestsLibrary {
       }
     });
 
+    // Test card interactions (Desktop Grid)
+    const testCards = document.querySelectorAll('.test-card');
+    testCards.forEach(card => {
+      card.addEventListener('click', this.handleCardClick.bind(this));
+      card.addEventListener('keydown', this.handleCardKeydown.bind(this));
+      
+      const cta = card.querySelector('.test-card__cta');
+      if (cta) {
+        cta.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.handleCardClick(e);
+        });
+      }
+    });
+
+
+
     // Family callout CTA
     const familyCTA = document.querySelector('.family-callout__cta');
     if (familyCTA) {
@@ -223,6 +240,34 @@ class TestsLibrary {
     const testType = timelineItem.getAttribute('data-test');
     
     this.startTest(testType, timelineItem);
+  }
+
+  handleCardClick(event) {
+    // Only handle click if it's not on the CTA button
+    if (event.target.closest('.test-card__cta')) {
+      return;
+    }
+    
+    const card = event.currentTarget;
+    const testType = card.getAttribute('data-test');
+    
+    this.startTest(testType, card);
+  }
+
+  handleCardKeydown(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      this.handleCardClick(event);
+    }
+  }
+
+  handleCardCTAClick(event) {
+    event.stopPropagation(); // Prevent card click handler
+    
+    const card = event.target.closest('.test-card');
+    const testType = card.getAttribute('data-test');
+    
+    this.startTest(testType, card);
   }
 
   startTest(testType, element) {

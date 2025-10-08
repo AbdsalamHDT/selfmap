@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<h            <div class="navbar__menu">
-                <a href="../index.html" class="navbar__link">Home</a>
-                <a href="tests.html" class="navbar__link">Tests</a>
-                <a href="dashboard.html" class="navbar__link">Dashboard</a>
-                <a href="pay.html" class="navbar__link">Pricing</a>
-                <a href="pay.html" class="navbar__cta">Get Started</a>
-            </div>g="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,8 +68,8 @@
         <!-- Tests Constellation -->
         <section class="tests" aria-labelledby="tests-title">
             <div class="tests__container">
-                <h2 id="tests-title" class="tests__title visually-hidden">
-                    Available Assessments
+                <h2 id="tests-title" class="tests__title">
+                    Choose Your Assessment
                 </h2>
                 
                 <div class="constellation" role="region" aria-label="Interactive test selection">
@@ -238,6 +232,121 @@
                             <button class="constellation__cta">Start Test →</button>
                         </div>
                         <div class="constellation__connector"></div>
+                    </div>
+                </div>
+
+                <!-- Desktop Grid Layout -->
+                <div class="tests-grid" role="region" aria-label="Test selection grid">
+                    <div class="test-card" role="button" tabindex="0" data-test="iq">
+                        <div class="test-card__header">
+                            <div class="test-card__icon">
+                                <img src="../assets/img/tests/IQ.png" alt="IQ Test">
+                            </div>
+                            <h3 class="test-card__title">IQ Test</h3>
+                        </div>
+                        <p class="test-card__description">Measure your cognitive abilities, logical reasoning, and problem-solving skills through carefully designed challenges.</p>
+                        <div class="test-card__footer">
+                            <span class="test-card__duration">15-20 min</span>
+                            <button class="test-card__cta">Start Test</button>
+                        </div>
+                    </div>
+
+                    <div class="test-card" role="button" tabindex="0" data-test="eq">
+                        <div class="test-card__header">
+                            <div class="test-card__icon">
+                                <img src="../assets/img/tests/EQ.png" alt="EQ Test">
+                            </div>
+                            <h3 class="test-card__title">Emotional Intelligence</h3>
+                        </div>
+                        <p class="test-card__description">Explore your emotional awareness, empathy, and social skills to better understand yourself and others.</p>
+                        <div class="test-card__footer">
+                            <span class="test-card__duration">12-15 min</span>
+                            <button class="test-card__cta">Start Test</button>
+                        </div>
+                    </div>
+
+                    <div class="test-card" role="button" tabindex="0" data-test="personality">
+                        <div class="test-card__header">
+                            <div class="test-card__icon">
+                                <img src="../assets/img/tests/Personality.png" alt="Personality Test">
+                            </div>
+                            <h3 class="test-card__title">Personality Profile</h3>
+                        </div>
+                        <p class="test-card__description">Discover your core personality traits, behavioral patterns, and unique characteristics.</p>
+                        <div class="test-card__footer">
+                            <span class="test-card__duration">18-25 min</span>
+                            <button class="test-card__cta">Start Test</button>
+                        </div>
+                    </div>
+
+                    <div class="test-card" role="button" tabindex="0" data-test="adhd">
+                        <div class="test-card__header">
+                            <div class="test-card__icon">
+                                <img src="../assets/img/tests/ADHD.png" alt="ADHD Test">
+                            </div>
+                            <h3 class="test-card__title">ADHD & Focus</h3>
+                        </div>
+                        <p class="test-card__description">Assess attention patterns, concentration levels, and focus-related behaviors in daily life.</p>
+                        <div class="test-card__footer">
+                            <span class="test-card__duration">10-15 min</span>
+                            <button class="test-card__cta">Start Test</button>
+                        </div>
+                    </div>
+
+                    <div class="test-card" role="button" tabindex="0" data-test="stress">
+                        <div class="test-card__header">
+                            <div class="test-card__icon">
+                                <img src="../assets/img/tests/Stress.png" alt="Stress Test">
+                            </div>
+                            <h3 class="test-card__title">Stress Assessment</h3>
+                        </div>
+                        <p class="test-card__description">Evaluate your stress levels and coping mechanisms to improve your mental well-being.</p>
+                        <div class="test-card__footer">
+                            <span class="test-card__duration">8-12 min</span>
+                            <button class="test-card__cta">Start Test</button>
+                        </div>
+                    </div>
+
+                    <div class="test-card" role="button" tabindex="0" data-test="attach">
+                        <div class="test-card__header">
+                            <div class="test-card__icon">
+                                <img src="../assets/img/tests/relationships.png" alt="Attachment Test">
+                            </div>
+                            <h3 class="test-card__title">Attachment Style</h3>
+                        </div>
+                        <p class="test-card__description">Understand your relationship patterns, attachment needs, and interpersonal dynamics.</p>
+                        <div class="test-card__footer">
+                            <span class="test-card__duration">15-20 min</span>
+                            <button class="test-card__cta">Start Test</button>
+                        </div>
+                    </div>
+
+                    <div class="test-card" role="button" tabindex="0" data-test="motivation">
+                        <div class="test-card__header">
+                            <div class="test-card__icon">
+                                <img src="../assets/img/tests/motivation.png" alt="Motivation Test">
+                            </div>
+                            <h3 class="test-card__title">Motivation Profile</h3>
+                        </div>
+                        <p class="test-card__description">Discover your drive patterns, goal orientation, and what truly motivates you to succeed.</p>
+                        <div class="test-card__footer">
+                            <span class="test-card__duration">12-18 min</span>
+                            <button class="test-card__cta">Start Test</button>
+                        </div>
+                    </div>
+
+                    <div class="test-card" role="button" tabindex="0" data-test="kids">
+                        <div class="test-card__header">
+                            <div class="test-card__icon">
+                                <img src="../assets/img/tests/Kids.png" alt="Kids Assessment">
+                            </div>
+                            <h3 class="test-card__title">Kids Assessment</h3>
+                        </div>
+                        <p class="test-card__description">Specialized assessment designed for children to understand their unique developmental patterns.</p>
+                        <div class="test-card__footer">
+                            <span class="test-card__duration">10-15 min</span>
+                            <button class="test-card__cta">Start Test</button>
+                        </div>
                     </div>
                 </div>
 

@@ -367,16 +367,177 @@ body::before {
   padding: 0 2rem;
 }
 
+.tests__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* ===========================
-   CONSTELLATION LAYOUT
+   DESKTOP GRID LAYOUT
+   =========================== */
+
+.tests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-xl);
+  margin: var(--spacing-2xl) 0;
+  padding: 0 var(--spacing-md);
+}
+
+.test-card {
+  background: var(--surface-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  transition: all var(--duration-normal) var(--easing-smooth);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.test-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--easing-smooth);
+}
+
+.test-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-blue);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(59, 130, 246, 0.2);
+}
+
+.test-card:hover::before {
+  opacity: 1;
+}
+
+.test-card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.test-card__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  background: var(--gradient-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--spacing-md);
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
+}
+
+.test-card__icon img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+}
+
+.test-card__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary-text);
+  margin: 0;
+}
+
+.test-card__description {
+  color: var(--secondary-text);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+  font-size: 0.95rem;
+}
+
+.test-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.test-card__duration {
+  font-size: 0.875rem;
+  color: var(--tertiary-text);
+  display: flex;
+  align-items: center;
+}
+
+.test-card__duration::before {
+  content: '⏱️';
+  margin-right: 0.5rem;
+}
+
+.test-card__cta {
+  background: var(--gradient-primary);
+  color: var(--primary-text);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--easing-smooth);
+  display: flex;
+  align-items: center;
+}
+
+.test-card__cta::after {
+  content: '→';
+  margin-left: 0.5rem;
+  transition: transform var(--duration-normal) var(--easing-smooth);
+}
+
+.test-card:hover .test-card__cta::after {
+  transform: translateX(4px);
+}
+
+/* Animation for cards */
+.test-card {
+  animation: fade-up 0.6s var(--easing-smooth) both;
+}
+
+.test-card:nth-child(1) { animation-delay: 0.1s; }
+.test-card:nth-child(2) { animation-delay: 0.15s; }
+.test-card:nth-child(3) { animation-delay: 0.2s; }
+.test-card:nth-child(4) { animation-delay: 0.25s; }
+.test-card:nth-child(5) { animation-delay: 0.3s; }
+.test-card:nth-child(6) { animation-delay: 0.35s; }
+.test-card:nth-child(7) { animation-delay: 0.4s; }
+.test-card:nth-child(8) { animation-delay: 0.45s; }
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+  .tests-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+  }
+}
+
+/* ===========================
+   CONSTELLATION LAYOUT (HIDDEN ON DESKTOP)
    =========================== */
 
 .constellation {
+  display: none; /* Hide constellation on desktop */
   position: relative;
   width: 100%;
   height: 800px;
   margin: var(--spacing-2xl) auto;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -1079,7 +1240,11 @@ body::before {
     height: 200px;
   }
 
-  /* Tests - Switch to Timeline */
+  /* Tests - Switch to Timeline on Mobile */
+  .tests-grid {
+    display: none;
+  }
+  
   .constellation {
     display: none;
   }
